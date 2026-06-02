@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Una invitación para ti ❤️</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background: #ffe6f0;
+    text-align: center;
+    margin-top: 80px;
+}
+
+#sobre{
+    font-size: 120px;
+    cursor: pointer;
+}
+
+#carta{
+    display: none;
+    margin: auto;
+    width: 70%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px gray;
+}
+
+button{
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>✉️ Tienes una carta</h1>
+
+<div id="sobre" onclick="abrirCarta()">
+📩
+</div>
+
+<div id="carta">
+
+<h2>Para ti ❤️</h2>
+
+<p>Hola amor,</p>
+
+<p>
+Quiero invitarte a pasar una tarde especial conmigo.
+</p>
+
+<p>
+Me gustaría compartir contigo, hablar, reírnos y crear un recuerdo bonito juntos.
+</p>
+
+<p>
+¿Aceptas esta invitación? 🌹
+</p>
+
+<button onclick="acepto()">💖 Sí</button>
+<button onclick="pensare()">🤔 Lo pensaré</button>
+
+<p id="respuesta"></p>
+
+</div>
+
+<script>
+
+function abrirCarta(){
+    document.getElementById("sobre").style.display = "none";
+    document.getElementById("carta").style.display = "block";
+}
+
+function acepto(){
+    document.getElementById("respuesta").innerHTML =
+    "🥰 ¡Me haces muy feliz mi amorcito! Entonces tenemos una cita.";
+}
+
+function pensare(){
+    document.getElementById("respuesta").innerHTML =
+    "😅 Está bien, igual vas a ir, o bueno si tienes 75k de sobra jejje .";
+}
+
+</script>
+
+</body>
+</html>
